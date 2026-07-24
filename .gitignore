@@ -4,6 +4,10 @@ _site/
 .jekyll-metadata
 .sass-cache/
 
+# Bundler
+.bundle/
+vendor/bundle/
+
 # macOS / Windows cruft
 .DS_Store
 Thumbs.db
