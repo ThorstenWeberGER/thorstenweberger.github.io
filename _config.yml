@@ -1,32 +1,32 @@
-baseurl: ''
-permalink: pretty
-title: 'Thorsten Weberger'
+title: Thorsten Weberger
+email: your.email@example.com
+author: Thorsten Weberger
+description: >-
+  Professional portfolio and project showcase.
 
-logo:
-  mobile: "images/logo/logo-mobile.svg"
-  mobile_height: "32px"
-  mobile_width: "32px"
-  desktop: "images/logo/logo.svg"
-  desktop_height: "32px"
-  desktop_width: "160px"
+baseurl: ""
+url: ""
 
-home:
-  limit_projects: 6
+theme: jekyll-theme-yat
 
-collections:
-  projects:
-    output: true
-    sort_by: weight
+copyright: "Copyright (cleft) {currentYear} {author}"
 
-defaults:
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
+header_pages:
+  - index.md
+  - projects.md
+  - about.md
+  - contact.md
 
-sass:
-  style: compressed # possible values: nested expanded compact compressed
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-spaceship
 
 exclude:
   - Gemfile
