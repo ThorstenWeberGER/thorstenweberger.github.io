@@ -1,0 +1,9 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# macOS / Windows cruft
+.DS_Store
+Thumbs.db
