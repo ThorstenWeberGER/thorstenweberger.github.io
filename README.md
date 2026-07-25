@@ -19,7 +19,6 @@ bundle exec jekyll serve
 
 - `index.html` – homepage (shows the latest projects)
 - `about.html` – about page
-- `contact.html` – contact page
 - `projects.html` – full project list, grouped by year
 - `_posts/` – project case studies (each project is a dated post)
 - `_config.yml` – Jekyll configuration (theme, site title, navigation, etc.)

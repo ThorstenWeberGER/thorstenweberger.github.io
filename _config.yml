@@ -15,7 +15,6 @@ header_pages:
   - index.md
   - projects.md
   - about.md
-  - contact.md
 
 markdown: kramdown
 kramdown:
