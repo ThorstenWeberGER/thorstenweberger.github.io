@@ -2,9 +2,9 @@
 layout: home
 title: Home
 heading: "Thorsten Weberger"
-subheading: "Senior Professional / Role Title (e.g., Full Stack Developer / Product Manager)"
+subheading: "Analytics Engineer / Data Engineer"
 ---
 
-A brief, high-impact paragraph confirming and summarizing what recruiters and hiring managers have already seen in your CV — your core expertise, the value you bring, and what drives you. Keep it to 3 - 4 sentences.
+Analytics Engineer with a background in business informatics and hands-on experience across data analysis, database development, and market intelligence before specializing in the modern data stack. For the past two years I've worked as a full-stack Analytics Engineer at a Frankfurt-based company, owning data products end-to-end — from Python-based extraction, through dbt transformations across the Bronze/Silver/Gold medallion architecture in Snowflake, to reporting in Power BI for stakeholders up to C-level. I'm Tableau-certified and enjoy automating workflows and weaving AI into everyday data work.
 
 [More about me →](/about.html)
