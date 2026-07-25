@@ -5,7 +5,7 @@ title: About
 
 ## About Me
 
-I'm an Analytics Engineer / Data Engineer who moved into the modern data stack after several years of hands-on, data-heavy work across different industries — analysis, database development, building out a marketing database, automated reporting, and market/competitive intelligence built on large market data models. That path, plus a genuine interest in the craft, led me to further training as an Analytics Engineer / dbt Engineer, and for the past two years I've been working full-time in that role.
+I'm an Analytics Engineer / Data Engineer with over 18 years in Marketing & Sales, including roughly a decade in Market Insights and Analytics roles — building marketing databases, automating reporting, and running market/competitive intelligence on large market data models. As that work grew increasingly data-driven, I completed further training as an Analytics Engineer at Masterschool, and for the past two years I've been working full-time in that role.
 
 ## What I Do
 
@@ -26,9 +26,10 @@ I'm the direct point of contact for stakeholders across the organization — fro
 * Led project teams of up to 12 people
 * Comfortable presenting to and collaborating with stakeholders at every level, including C-level
 
-## Certifications
+## Certifications & Training
 
 * Tableau Certified
+* Analytics Engineering training, Masterschool
 
 ## What Drives Me
 
