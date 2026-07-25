@@ -10,3 +10,5 @@ Analytics Engineer with over 18 years in Marketing & Sales, including roughly a 
 [More about me →](/about.html)
 
 {% include social-links.html %}
+
+<hr style="margin: 30px 0 0; border: none; border-top: 1px solid #e3e3e3; padding-bottom: 30px;">
