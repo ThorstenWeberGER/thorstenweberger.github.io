@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-heading: "Thorsten Weberger"
+heading: "Thorsten Weber"
 subheading: "Analytics Engineer / Data Engineer"
 ---
 
