@@ -1,0 +1,8 @@
+<div class="social-links" style="display:flex; gap:16px; align-items:center; flex-wrap:wrap; margin: 16px 0;">
+  {%- for item in site.data.social -%}
+  <a href="{{ item.url }}" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:6px; text-decoration:none;">
+    <img src="{{ item.icon | relative_url }}" alt="{{ item.name }}" width="24" height="24" style="border-radius:4px;">
+    <span>{{ item.name }}</span>
+  </a>
+  {%- endfor -%}
+</div>

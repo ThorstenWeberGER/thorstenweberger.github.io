@@ -1,0 +1,6 @@
+- name: LinkedIn
+  url: https://www.linkedin.com/in/thorweber/
+  icon: /assets/images/social/linkedin.svg
+- name: Tableau Public
+  url: https://public.tableau.com/app/profile/thorsten.weber/
+  icon: /assets/images/social/tableau.svg
