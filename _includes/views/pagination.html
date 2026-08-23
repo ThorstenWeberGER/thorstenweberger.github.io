@@ -20,8 +20,14 @@
       {% assign excerpt = return %}
       {%- assign post_url = post.url | relative_url -%}
 
+      {%- assign now_ts = site.time | date: '%s' | plus: 0 -%}
+      {%- assign post_ts = post.date | date: '%s' | plus: 0 -%}
+      {%- assign post_age_secs = now_ts | minus: post_ts -%}
+      {%- assign is_new = false -%}
+      {%- if post_age_secs <= 7776000 -%}{%- assign is_new = true -%}{%- endif -%}
+
       <h2 class="post-title">
-        <a class="post-link{% if post.new %} is-new{% endif %}" href="{{ post_url }}">
+        <a class="post-link{% if is_new %} is-new{% endif %}" href="{{ post_url }}">
           {{ post.title | escape }}
         </a>
       </h2>

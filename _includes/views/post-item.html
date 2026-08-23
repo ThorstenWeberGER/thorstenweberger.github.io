@@ -5,9 +5,14 @@
 {%- assign post = item -%}
 
 {% assign date_format = site.yat.date_format | default: "%b %-d, %Y" %}
+{%- assign now_ts = site.time | date: '%s' | plus: 0 -%}
+{%- assign post_ts = post.date | date: '%s' | plus: 0 -%}
+{%- assign post_age_secs = now_ts | minus: post_ts -%}
+{%- assign is_new = false -%}
+{%- if post_age_secs <= 7776000 -%}{%- assign is_new = true -%}{%- endif -%}
 <span class="post-meta">{{ post.date | date: date_format }}</span>
 <span>
-  <a class="post-link{% if post.new %} is-new{% endif %}" href="{{ post.url | relative_url }}">
+  <a class="post-link{% if is_new %} is-new{% endif %}" href="{{ post.url | relative_url }}">
     {{ post.title | escape }}
   </a>
 </span>
