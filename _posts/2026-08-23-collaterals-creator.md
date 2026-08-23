@@ -4,6 +4,7 @@ title: "Collaterals Creator"
 subtitle: "Marketing collateral as design systems, not one-off canvas edits"
 categories: projects
 tags: [python, design-systems, automation, marketing]
+new: true
 ---
 
 ![Edit the code, not the canvas](/assets/images/projects/collaterals-creator.png)
