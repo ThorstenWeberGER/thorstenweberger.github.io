@@ -4,6 +4,7 @@ title: "Clear Writing"
 subtitle: "Where most writing guides stop at advice, this one enforces it"
 categories: projects
 tags: [claude-code, automation, writing, python]
+new: true
 ---
 
 ![Slop doesn't ship](/assets/images/projects/clear-writing.png)
