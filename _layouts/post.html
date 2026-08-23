@@ -50,7 +50,12 @@ sidebar:
       <ul>
         {% assign posts = site[page.collection] | sample:4 %}
         {%- for post in posts -%}
-        <li><a class="post-link{% if post.new %} is-new{% endif %}" href="{{post.url | relative_url}}" title="{{ page.next.title | escape }}">{{ post.title | escape | truncatewords: 12 }}</a></li>
+        {%- assign now_ts = site.time | date: '%s' | plus: 0 -%}
+        {%- assign post_ts = post.date | date: '%s' | plus: 0 -%}
+        {%- assign post_age_secs = now_ts | minus: post_ts -%}
+        {%- assign is_new = false -%}
+        {%- if post_age_secs <= 7776000 -%}{%- assign is_new = true -%}{%- endif -%}
+        <li><a class="post-link{% if is_new %} is-new{% endif %}" href="{{post.url | relative_url}}" title="{{ page.next.title | escape }}">{{ post.title | escape | truncatewords: 12 }}</a></li>
         {%- endfor -%}
       </ul>
     </div>

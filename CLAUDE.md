@@ -76,7 +76,41 @@ line is omitted if there's no hero image to use.
 editing when adding a project — the new post appears automatically once it's
 in `_posts/` with `categories: projects`.
 
-### 5. Commit and push
+### 5. The "NEW" badge is automatic — verify it, don't hand-set it
+
+The theme (`jekyll-theme-yat`) prints a "NEW" ribbon after post links on
+**both** the homepage feed and the `/projects` archive page (and in the
+"Related Articles" block on individual posts). By default the theme does
+this unconditionally for every post, which is a bug we fixed by overriding
+three theme files:
+
+- `_includes/views/pagination.html` (homepage feed)
+- `_includes/views/post-item.html` (`/projects` archive page)
+- `_layouts/post.html` (related-articles block)
+- `assets/css/main.scss` (scopes the ribbon's CSS to an `.is-new` class)
+
+The badge is **date-driven, not manual**: each override computes whether a
+post is within the last 3 months (90 days) of the site's build time and
+adds the `is-new` class itself. There is no `new: true` front-matter flag
+to set — do not add one, it does nothing.
+
+**When adding a new post, always verify the badge behaves correctly on
+both pages** (homepage `index.md` and `/projects.html`, since both use the
+overridden includes above):
+
+```bash
+bundle exec jekyll build --destination /tmp/_site_check
+grep -B2 'class="post-link is-new"' /tmp/_site_check/index.html
+grep -B2 'class="post-link is-new"' /tmp/_site_check/projects.html
+```
+
+Confirm the new post appears in both, and that anything older than ~3
+months does not. If the theme gem is ever upgraded, re-diff these three
+overridden files against the new gem version (find it under
+`vendor/bundle/ruby/*/gems/jekyll-theme-yat-*/`) to make sure the override
+still matches the upstream structure it's patching.
+
+### 6. Commit and push
 
 Commit only the new post file (and new image, if added) with a concise
 message like `Add <project> to projects`. Don't touch unrelated files.
