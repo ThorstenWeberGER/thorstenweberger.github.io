@@ -6,8 +6,6 @@ categories: projects
 tags: [dbt, snowflake, teaching, documentation]
 ---
 
-![dbt training curriculum mind map](/assets/images/projects/dbt-training.png)
-
 I designed and delivered a structured, hands-on dbt Core training program to bring my team from first principles to production patterns — 16 modules across three tiers, built on a Snowflake + Medallion architecture stack. It includes lesson plans, slide decks, a hands-on coding project (a partially-built dbt project participants complete session by session), and trainer guides, so the curriculum can be run again or self-studied.
 
 **Tech Stack:** dbt Core · Snowflake · Slidev (presentations) · Git/GitHub
