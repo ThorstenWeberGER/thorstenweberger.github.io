@@ -6,8 +6,6 @@ categories: projects
 tags: [dbt, snowflake, tableau, sql, etl]
 ---
 
-![dbt Silverscreen logo](/assets/images/projects/dbt_silverscreen.png)
-
 A production-style Analytics Engineering pipeline that turns a messy, multi-source dataset into a single source of truth answering a real business question. Using dbt and Snowflake, I built a full Medallion-architecture pipeline (Raw → Staging → Integration → Consumer) with 10+ tested models, then visualized the resulting KPIs in a Tableau dashboard that exposed exactly which locations and movie genres were driving losses.
 
 **Tech Stack:** Snowflake · dbt · SQL · Jinja & Macros · dbt-utils / dbt-expectations · Tableau · Git/GitHub
