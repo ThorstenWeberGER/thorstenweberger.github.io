@@ -55,7 +55,7 @@ sidebar:
         {%- assign post_age_secs = now_ts | minus: post_ts -%}
         {%- assign is_new = false -%}
         {%- if post_age_secs <= 7776000 -%}{%- assign is_new = true -%}{%- endif -%}
-        <li><a class="post-link{% if is_new %} is-new{% endif %}" href="{{post.url | relative_url}}" title="{{ page.next.title | escape }}">{{ post.title | escape | truncatewords: 12 }}</a></li>
+        <li><a class="post-link" href="{{post.url | relative_url}}" title="{{ page.next.title | escape }}">{{ post.title | escape | truncatewords: 12 }}</a>{% if is_new %}<span class="new-badge">NEW</span>{% endif %}</li>
         {%- endfor -%}
       </ul>
     </div>

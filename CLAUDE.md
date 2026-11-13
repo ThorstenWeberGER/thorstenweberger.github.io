@@ -87,11 +87,13 @@ three theme files:
 - `_includes/views/pagination.html` (homepage feed)
 - `_includes/views/post-item.html` (`/projects` archive page)
 - `_layouts/post.html` (related-articles block)
-- `assets/css/main.scss` (scopes the ribbon's CSS to an `.is-new` class)
+- `assets/css/main.scss` (turns off the theme's CSS ribbon and styles `.new-badge`)
 
 The badge is **date-driven, not manual**: each override computes whether a
 post is within the last 3 months (90 days) of the site's build time and
-adds the `is-new` class itself. There is no `new: true` front-matter flag
+prints a `<span class="new-badge">NEW</span>` after the link itself.
+It is a real element, not a CSS `:after` on the link, so it does not
+disappear once a reader has visited the post. There is no `new: true` front-matter flag
 to set — do not add one, it does nothing.
 
 **When adding a new post, always verify the badge behaves correctly on
@@ -100,8 +102,8 @@ overridden includes above):
 
 ```bash
 bundle exec jekyll build --destination /tmp/_site_check
-grep -B2 'class="post-link is-new"' /tmp/_site_check/index.html
-grep -B2 'class="post-link is-new"' /tmp/_site_check/projects.html
+grep -B4 'class="new-badge"' /tmp/_site_check/index.html | grep -o 'href="[^"]*"'
+grep -B4 'class="new-badge"' /tmp/_site_check/projects.html | grep -o 'href="[^"]*"'
 ```
 
 Confirm the new post appears in both, and that anything older than ~3
