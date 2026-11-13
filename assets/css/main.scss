@@ -64,8 +64,8 @@ $content-width: {{ site.content_width | default: '920px' }};
 // banner. The theme would stretch a banner image to cover the whole area,
 // so pin this one to the corner at a fixed share of the banner height.
 .page-banner .page-banner-img > div[style*="banner-pattern"] {
-  background-size: auto 62%;
-  background-position: right 4% bottom 8%;
+  background-size: auto 38%;
+  background-position: right 6% bottom 14%;
   background-repeat: no-repeat;
 }
 
@@ -73,7 +73,7 @@ $content-width: {{ site.content_width | default: '920px' }};
 // smaller and below it.
 @media (max-width: 600px) {
   .page-banner .page-banner-img > div[style*="banner-pattern"] {
-    background-size: 70% auto;
-    background-position: right 6% bottom 4%;
+    background-size: 62% auto;
+    background-position: right 8% bottom 8%;
   }
 }
