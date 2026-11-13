@@ -27,9 +27,10 @@
       {%- if post_age_secs <= 7776000 -%}{%- assign is_new = true -%}{%- endif -%}
 
       <h2 class="post-title">
-        <a class="post-link{% if is_new %} is-new{% endif %}" href="{{ post_url }}">
+        <a class="post-link" href="{{ post_url }}">
           {{ post.title | escape }}
         </a>
+        {% if is_new %}<span class="new-badge">NEW</span>{% endif %}
       </h2>
       <div class="post-meta">
         <span class="post-date"><i class="fa fa-calendar"></i> {{ post.date | date: date_format }}</span>

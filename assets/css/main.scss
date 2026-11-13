@@ -37,37 +37,25 @@ $content-width: {{ site.content_width | default: '920px' }};
 
 @import "yat";
 
-// The theme shows a "NEW" ribbon after every post link, unconditionally.
-// Suppress it by default and only render it on links marked `.is-new`
-// (added by the overridden includes for posts under 90 days old).
+// The theme draws a "NEW" ribbon as a CSS :after on every post link and
+// hides it on visited links. Turn that off completely. The badge is a real
+// <span class="new-badge"> added by the overridden includes for posts under
+// 90 days old, so only the post's age decides, never the reader's history.
 .pagination .post-title a:after,
 .page-segments li a:after,
 .post-related ul a:after {
   content: none;
 }
 
-.pagination .post-title a.is-new:after,
-.page-segments li a.is-new:after,
-.post-related ul a.is-new:after {
-  content: 'NEW';
-  position: absolute;
+.new-badge {
+  display: inline-block;
   margin-left: 8px;
-  margin-top: 3px;
-  padding: 0px 3px;
+  padding: 0 3px;
+  vertical-align: super;
   background-color: $brand-color;
   color: #fff;
   font-size: 10px;
   font-weight: 600;
+  line-height: 1.6;
   border-radius: 2px;
-}
-
-// The theme blanks the badge on visited links (light and dark mode).
-// Keep it visible for the whole 90 days instead.
-html .pagination .post-title a.is-new:visited:after,
-html .page-segments li a.is-new:visited:after,
-html .post-related ul a.is-new:visited:after,
-html[data-theme=dark] .pagination .post-title a.is-new:visited:after,
-html[data-theme=dark] .page-segments li a.is-new:visited:after,
-html[data-theme=dark] .post-related ul a.is-new:visited:after {
-  background-color: $brand-color;
 }

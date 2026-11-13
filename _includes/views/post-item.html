@@ -12,7 +12,8 @@
 {%- if post_age_secs <= 7776000 -%}{%- assign is_new = true -%}{%- endif -%}
 <span class="post-meta">{{ post.date | date: date_format }}</span>
 <span>
-  <a class="post-link{% if is_new %} is-new{% endif %}" href="{{ post.url | relative_url }}">
+  <a class="post-link" href="{{ post.url | relative_url }}">
     {{ post.title | escape }}
   </a>
+  {% if is_new %}<span class="new-badge">NEW</span>{% endif %}
 </span>
