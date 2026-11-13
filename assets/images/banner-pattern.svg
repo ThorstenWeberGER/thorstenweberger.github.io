@@ -4,7 +4,7 @@
        connectors only. -->
 
   <!-- connectors -->
-  <g opacity="0.13" stroke-width="1.1">
+  <g opacity="0.22" stroke-width="1.1">
     <path d="M86 70 H150 V120 H210"/>
     <path d="M86 140 H150 V120"/>
     <path d="M86 140 H150 V200 H210"/>
@@ -18,7 +18,7 @@
   </g>
 
   <!-- boxes: sources, two layers, output -->
-  <g stroke-opacity="0.18" stroke-width="1.2">
+  <g stroke-opacity="0.30" stroke-width="1.2">
     <rect x="62" y="62" width="24" height="16"/>
     <rect x="62" y="132" width="24" height="16"/>
     <rect x="62" y="202" width="24" height="16"/>
@@ -28,7 +28,7 @@
     <rect x="350" y="153" width="20" height="14"/>
     <rect x="350" y="243" width="20" height="14"/>
     <rect x="487" y="191" width="26" height="18"/>
-    <rect x="480" y="184" width="40" height="32" stroke-opacity="0.10"/>
-    <rect x="472" y="176" width="56" height="48" stroke-opacity="0.06" stroke-dasharray="3 5"/>
+    <rect x="480" y="184" width="40" height="32" stroke-opacity="0.17"/>
+    <rect x="472" y="176" width="56" height="48" stroke-opacity="0.10" stroke-dasharray="3 5"/>
   </g>
 </svg>
