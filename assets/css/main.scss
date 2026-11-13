@@ -59,3 +59,21 @@ $content-width: {{ site.content_width | default: '920px' }};
   line-height: 1.6;
   border-radius: 2px;
 }
+
+// Homepage banner: a faint line pattern in the lower right of the grey
+// banner. The theme would stretch a banner image to cover the whole area,
+// so pin this one to the corner at a fixed share of the banner height.
+.page-banner .page-banner-img > div[style*="banner-pattern"] {
+  background-size: auto 64%;
+  background-position: right 0% bottom 4%;
+  background-repeat: no-repeat;
+}
+
+// On narrow screens the name fills the width, so keep the pattern
+// smaller and below it.
+@media (max-width: 600px) {
+  .page-banner .page-banner-img > div[style*="banner-pattern"] {
+    background-size: 66% auto;
+    background-position: right 2% bottom 2%;
+  }
+}
